@@ -1,0 +1,48 @@
+.Tasks__item {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	padding: 0 15px;
+	margin-bottom: 20px;
+	background-color: #bcd5ffd5;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	color: rgb(33, 33, 33);
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 1px;
+	font-size: 17px;
+	transition: 0.2s;
+}
+.Tasks__item:hover {
+	transform: scale(1);
+}
+.Tasks__time {
+	font-weight: 800;
+	font-size: 19px;
+	margin-right: 20px;
+	color: rgb(159, 0, 0);
+	border-radius: 5px;
+	transition: 0.2s all;
+}
+
+.Tasks__title {
+	font-weight: 800;
+	color: rgb(33, 33, 33);
+	transition: 0.2s all;
+}
+
+.Tasks__complete {
+	width: 25px;
+	height: 25px;
+	border: 4px solid rgb(159, 0, 0);
+	border-radius: 50%;
+	position: absolute;
+	right: 3%;
+	transition: 0.5s;
+}
+.Tasks__complete:hover {
+	border-radius: 50%;
+	border: 4px solid rgb(10, 120, 0);
+	background-color: rgba(21, 255, 0, 0.45);
+}
