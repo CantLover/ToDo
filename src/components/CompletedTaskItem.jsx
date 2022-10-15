@@ -9,7 +9,7 @@ const TaskItem = props => {
 			<button
 				className={classes.Tasks__complete}
 				onClick={() => props.remove(props.task)}
-			></button>
+			>x</button>
 		</div>
 	);
 };

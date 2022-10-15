@@ -5,11 +5,7 @@ import TasksList from './components/TasksList';
 import ComplitedTasksList from './components/CompletedTasksList';
 
 function App() {
-	const [tasks, setTasks] = useState([
-		{ time: '20:00', title: 'Lick slicker finger' },
-		{ time: '10:00', title: 'Start watch film' },
-		{ time: '18:30', title: 'Disturp USSR' },
-	]);
+	const [tasks, setTasks] = useState([]);
 	const [tasksCompleted, setTasksCompleted] = useState([]);
 	const [task, setTask] = useState({ time: '00:00', title: '' });
 	const [modalActive, setModalActive] = useState(false);
@@ -101,6 +97,7 @@ function App() {
 								onChange={e => setTask({ ...task, time: e.target.value })}
 							/>
 							<input
+								autofocus
 								type='text'
 								value={task.title}
 								placeholder='Task'
@@ -109,7 +106,7 @@ function App() {
 							/>
 						</div>
 						<button className='ModalBody__button' onClick={addNewTask}>
-							Create
+							CREATE
 						</button>
 					</form>
 				</div>

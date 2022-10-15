@@ -122,40 +122,47 @@ legend {
 }
 
 .App {
+	background: url(/src/img/giff.gif) center fixed;
+	background-size: cover;
+	min-height: 100vh;
 }
 .Title {
-	background-color: #1a1d22;
+	position: fixed;
+	background-color: #000000a8;
+	z-index: 2;
 	width: 100%;
 	padding: 10px;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 70px;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.153);
+	backdrop-filter: blur(8px);
 }
 h1 {
 	font-size: 34px;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-weight: 800;
-	color: rgb(142, 0, 0);
-	letter-spacing: 40px;
+	width: 400px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	font-weight: 100;
+	color: rgba(203, 203, 255, 0.893);
+	text-shadow: 5px 5px rgba(126, 126, 126, 0.533);;
+	letter-spacing: 100px;
 }
 
 .MainLine {
 	width: 50%;
 	height: 2px;
-	background-color: rgba(240, 241, 255, 0.203);
-	margin: 3% 0;
+	background-color: rgba(175, 175, 255, 0.843);
+	margin: 3% 0 3% 0;
 }
 .Body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #272b33;
+	
 }
 .WrapperContent {
+	margin-top: 150px;
 	max-width: 1200px;
-	height: 100vh;
 	width: 90%;
 	display: flex;
 	flex-direction: column;
@@ -173,10 +180,10 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: rgb(220, 220, 220);
-	border: 1px solid rgb(220, 220, 220);
+	color: rgb(206, 203, 255);
+	border: 1px solid rgb(192, 187, 255);
 	font-size: 24px;
-	font-weight: 300;
+	font-weight: 600;
 }
 .EmptyCompleted {
 	width: 70%;
@@ -188,9 +195,10 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: rgb(104, 104, 104);
+	color: rgba(209, 209, 255, 0.771);
+	text-shadow: 0 0 5px rgb(0, 0, 0);
 	font-size: 24px;
-	font-weight: 300;
+	font-weight: 600;
 }
 
 .Tasks {
@@ -203,7 +211,7 @@ h1 {
 	height: 40px;
 	margin-bottom: 20px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 .Bottoms__create {
 	width: 35px;
@@ -211,15 +219,18 @@ h1 {
 	font-size: 26px;
 	font-weight: 800;
 	padding-bottom: 10px;
-	background-color: rgba(159, 0, 0, 0.74);
-	color: rgba(248, 248, 248, 0.829);
-	border-radius: 20%;
+	background-color: #bcd5ff45;
+	color: rgba(248, 248, 248, 0.649);
+	border-radius: 50%;
 	margin-top: 5px;
+	margin-right: 15px;
+	margin-left: 15px;
 	transition: 0.2s all;
+	backdrop-filter: blur(3px);
 }
 .Bottoms__create:hover {
-	background-color: rgb(196, 0, 0);
-	color: rgb(255, 255, 255);
+	background-color: rgba(196, 196, 255, 0.663);
+	color: rgba(255, 255, 255, 0.87);
 }
 
 .Bottoms__time {
@@ -227,45 +238,58 @@ h1 {
 	height: 35px;
 	font-size: 18px;
 	font-weight: 800;
-	color: rgba(255, 255, 255, 0.86);
+	color: rgb(243, 243, 255);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(159, 0, 0, 0.765);
-	border-radius: 5px;
+	background-color: #bcd5ff45;
+	border-radius: 35px;
+	margin-left: 15px;
+	margin-right: 15px;
 	margin-top: 5px;
-	margin-right: 20px;
+	backdrop-filter: blur(3px);
 }
 
 .ModalBody {
 	padding-bottom: 40px;
 }
 .ModalBody__inputs {
+	color: rgba(255, 255, 255, 0.826);
 }
 
 .ModalBody__time {
 	width: 100px;
 	margin-right: 5px;
-	border: 2px solid #282c3457;
+	border: 2px solid rgba(0, 0, 0, 0.567);
+	background-color: rgba(53, 59, 143, 0.77);
 	border-radius: 5px;
 	padding: 2.6px 10px;
+	font-weight: 800;
 }
 .ModalBody__title {
-	border: 2px solid #282c3457;
+	border: 2px solid rgba(0, 0, 0, 0.567);
+	background-color: rgba(53, 59, 143, 0.77);
 	width: 250px;
 	border-radius: 5px;
 	padding: 5px 10px;
+	font-weight: 800;
 }
 
 .ModalBody__button {
 	position: absolute;
 	bottom: 15px;
+	letter-spacing: 1px;
 	right: 20px;
-	color: rgb(255, 255, 255);
+	color: rgba(255, 255, 255, 0.919);
 	font-weight: 800;
-	background-color: rgb(0, 163, 0);
+	font-size: 14px;
+	background-color: rgb(53, 59, 143);
 	border-radius: 5px;
 	padding: 6px;
+	transition: 0.3s;
+}
+.ModalBody__button:hover {
+	background-color: rgba(38, 42, 122, 0.704);
 }
 
 .task-enter {
